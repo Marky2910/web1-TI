@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Learn HTML Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Students Data</h1>
+
+    <table style="width: 100%;">
+        <tr colspan="10">
+            <!--This is the table header-->
+            <th>Num.</th>
+            <th>NIM</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Attendance</th>
+
+        </tr>
+        <tr>
+            <!--This is a table data-->
+            <td>1.</td>
+            <td>071</td>
+            <td>Mark</td>
+            <td>Inside</td>
+            <td>Present</td>
+
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>710</td>
+            <td>Joni</td>
+            <td>Inside</td>
+            <td>Absent</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>711</td>
+            <td>Rani</td>
+            <td>Outside</td>
+            <td>Present</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>724</td>
+            <td>Rudi</td>
+            <td>Inside</td>
+            <td rowspan="2">Present</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>755</td>
+            <td>Budi</td>
+            <td>Outside</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    
+    <!--This is second table-->
+    <table borders="1" style="width:13%">
+        <tr>
+
+            <th>A</th>
+            <th colspan="3">B</th>
+            
+        </tr>
+        <tr>
+
+            <Td rowspan="2">C</Td>
+            <td>D</td>
+            <td>E</td>
+            <td rowspan="3">F</td>
+
+        </tr>
+        <tr>
+            
+            <td>G</td>
+            <td rowspan="2">H</td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2">I</td>
+
+        </tr>
+        <tr>
+
+            <Td colspan="4">J</Td>
+
+        </tr>
+
+    </table>
+</body>
+</html>
