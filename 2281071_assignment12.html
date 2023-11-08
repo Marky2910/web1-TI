@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2281071_assignment12</title>
+</head>
+<body>
+    <h1>Very Simple Calculator</h1>
+
+    Input:<input type="text" id="num1" placeholder="Enter number">
+    <select id="operator">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <input type="text" id="num2" placeholder="Enter number">
+
+    <button onclick="calculate()">Calculate</button>
+    <br><br>
+    Result:<input type="text" id="result" readonly>
+
+    <script>
+        function add(a, b){
+            return a + b;
+        }
+        function subtract(a, b) {
+            return a - b;
+        }
+        function multiply(a, b) {
+            return a * b;
+        }
+        function divide(a, b) {
+            if (b === 0) {
+            return "Error: Division by zero";
+        }
+            return a / b;
+        }
+
+        const operators = {
+            add: add,
+            subtract: subtract,
+            multiply: multiply,
+            divide: divide,
+        };
+
+        function calculate() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operator = document.getElementById("operator").value;
+
+            if (operators[operator]) {
+            const result = operators[operator](num1, num2);
+            document.getElementById("result").value = result;
+        
+            }
+        }
+    </script>
+</body>
+</html>
